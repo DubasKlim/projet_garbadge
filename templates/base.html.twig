@@ -12,6 +12,20 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-    </body>
+<nav>
+<a>Barre de navigation</a>
+{% if app.user %}
+<div>
+Bonjour {{ app.user.username }} <a href="{{ path('app_logout') 
+}}">Déconnexion</a>
+</div>
+{% else %}
+<div>
+<a href="{{ path('app_utilisateur_new') }}">S'inscrire</a>
+<a href="{{ path('app_login') }}">Se connecter</a>
+</div>
+{% endif %}
+</nav>
+{% block body %}{% endblock %}
+</body>
 </html>
