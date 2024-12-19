@@ -11,7 +11,7 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
+        <body>
 <nav>
 <a>Barre de navigation</a>
 {% if app.user %}
@@ -28,4 +28,5 @@ Bonjour {{ app.user.username }} <a href="{{ path('app_logout')
 </nav>
 {% block body %}{% endblock %}
 </body>
+
 </html>
